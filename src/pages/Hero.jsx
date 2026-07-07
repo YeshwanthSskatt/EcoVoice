@@ -81,7 +81,7 @@ function Hero() {
 					{cards.map((cards, index) => (
 						<div
 							key={index}
-							className='w-75 h-50 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-600'
+							className='w-75 h-50 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
 						>
 							<div className=' flex flex-col gap-4'>
 								<div className='flex gap-5 items-center'>
@@ -108,6 +108,23 @@ function Hero() {
 					))}
 				</div>
 			</section>
+			<section className='relative mt-12 w-full hidden md:flex flex-col justify-center items-center'>
+				<div className='flex flex-col flex-wrap gap-4 border-2 border-gray-200  shadow-lg shadow-gray-400 rounded-2xl px-15 py-10'>
+					<h2 className='text-black text-center text-4xl font-bold'>
+						Small Actions, Big Impact
+					</h2>
+
+					<p className='text-center text-gray-500'>
+						Every action counts. Start today and inspire others.
+					</p>
+					<div className='text-center'>
+						<button className=' bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-lg cursor-pointer'>
+							Get Involved
+						</button>
+					</div>
+				</div>
+			</section>
+
 			<section className='max-w-7xl mx-auto mt-12 relative w-full flex flex-col '>
 				<div className='px-8 flex justify-between items-center'>
 					<h2 className='text-3xl font-semibold'>Latest Updates</h2>
@@ -118,11 +135,11 @@ function Hero() {
 					Stay informed with the latest environmental news and alerts.
 				</p>
 
-				<div className='flex flex-wrap justify-center items-center gap-8'>
+				<div className='flex flex-wrap justify-center items-center gap-4'>
 					{updates.map((item, index) => (
 						<div
 							key={index}
-							className='flex flex-col gap-2 mt-8 w-100 overflow-hidden border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-600'
+							className='flex flex-col gap-2 mt-8 w-100 overflow-hidden border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
 						>
 							<div className='h-48 bg-linear-to-br from-green-100 to-green-300 flex items-center justify-center'>
 								<div

@@ -9,7 +9,7 @@ function Footer() {
 		<>
 			<section className='flex flex-col'>
 				<div className='py-5 md:py-5  bg-black/80 backdrop-blur-xl  shadow-lg px-10 flex flex-wrap gap-10 justify-evenly'>
-					<div className='flex flex-col gap-5'>
+					<div className=' hidden lg:flex flex-col gap-5'>
 						<NavLink to='/' onClick={() => setActive('')}>
 							<div className='flex  text-xl text-white font-medium gap-1 cursor-pointer'>
 								<img src={eco} alt='logo' className='w-6 ' />
@@ -54,7 +54,7 @@ function Footer() {
 							</ul>
 						</div>
 					</div>
-					<div className='text-white flex flex-col flex-wrap gap-5'>
+					<div className='text-white flex flex-col justify-center items-center md:items-start flex-wrap gap-5'>
 						<p className='text-lg font-semibold'>Connect With Us</p>
 						<div className='flex text-4xl text-white gap-5 '>
 							<FaFacebook />
