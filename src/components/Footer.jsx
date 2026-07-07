@@ -64,7 +64,7 @@ function Footer() {
 						</div>
 						<p>Subscribe to our newsletter</p>
                         <div className='flex flex-wrap justify-center gap-2'>
-                            <input type="text" placeholder='Enter Your Email' className=' px-2 bg-white border-none rounded-lg outline-none placeholder:text-center placeholder:text-gray-400 text-black' />
+                            <input type="text" placeholder='Enter Your Email' className='w-60 px-2 bg-white border-none rounded-lg outline-none placeholder:text-center placeholder:text-gray-400 text-black' />
                             <button className=' bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-lg cursor-pointer'>
 							Subscribe
 						</button>

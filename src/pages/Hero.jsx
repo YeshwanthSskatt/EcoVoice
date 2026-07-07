@@ -1,7 +1,7 @@
 import React from 'react';
 import eco from '../assets/eco.png';
 import ecobar from '../assets/ecobar.png';
-import { stats, cards } from '../constants';
+import { stats, cards, updates } from '../constants';
 
 function Hero() {
 	return (
@@ -69,19 +69,19 @@ function Hero() {
 				</div>
 			</section>
 
-			<section className='-mt-10 relative w-full flex flex-col justify-center items-center'>
+			<section className='max-w-7xl mx-auto -mt-10 relative w-full flex flex-col justify-center items-center'>
 				<h2 className='text-4xl font-bold text-center'>What We Do</h2>
 
-				<p className='px-5 text-center text-gray-600 mt-4 m-10'>
+				<p className='px-5 text-center text-gray-600 mt-4 '>
 					Tools and resources to help you stay informed and take
 					action.
 				</p>
 
-				<div className='flex flex-wrap justify-center items-center gap-4'>
+				<div className='flex flex-wrap justify-center items-center gap-4 mt-8'>
 					{cards.map((cards, index) => (
 						<div
 							key={index}
-							className='w-75 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-600'
+							className='w-75 h-50 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-600'
 						>
 							<div className=' flex flex-col gap-4'>
 								<div className='flex gap-5 items-center'>
@@ -102,6 +102,51 @@ function Hero() {
 
 								<p className='text-green-600 font-semibold'>
 									{cards.btn}
+								</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+			<section className='max-w-7xl mx-auto mt-12 relative w-full flex flex-col '>
+				<div className='px-8 flex justify-between items-center'>
+					<h2 className='text-3xl font-semibold'>Latest Updates</h2>
+					<p className='text-green-600 font-semibold'>View All</p>
+				</div>
+
+				<p className='px-8 text-left text-gray-600 mt-4 '>
+					Stay informed with the latest environmental news and alerts.
+				</p>
+
+				<div className='flex flex-wrap justify-center items-center gap-8'>
+					{updates.map((item, index) => (
+						<div
+							key={index}
+							className='flex flex-col gap-2 mt-8 w-100 overflow-hidden border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-600'
+						>
+							<div className='h-48 bg-linear-to-br from-green-100 to-green-300 flex items-center justify-center'>
+								<div
+									className={`w-20 h-20 rounded-full flex items-center justify-center text-4xl ${item.color}`}
+								>
+									{item.icon}
+								</div>
+							</div>
+
+							<div className='flex flex-col gap-2'>
+								<p className='text-sm text-gray-400'>
+									{item.date}
+								</p>
+
+								<h3 className='text-2xl font-semibold'>
+									{item.title}
+								</h3>
+
+								<p className='text-gray-500 leading-5'>
+									{item.description}
+								</p>
+
+								<p className='mt-2 flex items-center text-green-600 font-semibold '>
+									Read More
 								</p>
 							</div>
 						</div>

@@ -7,7 +7,17 @@ export const navLinks = [
 	{ name: 'Contact', path: '/contact' },
 ];
 
-import { FaLeaf, FaTemperatureHigh, FaTint, FaTree } from 'react-icons/fa';
+import {
+	FaLeaf,
+	FaTemperatureHigh,
+	FaTint,
+	FaTree,
+	FaMapMarkedAlt,
+	FaUsers,
+	FaBookOpen,
+	FaWater,
+	FaArrowRight,
+} from 'react-icons/fa';
 
 export const stats = [
 	{
@@ -44,8 +54,6 @@ export const stats = [
 	},
 ];
 
-import { FaMapMarkedAlt, FaUsers, FaBookOpen } from 'react-icons/fa';
-
 export const cards = [
 	{
 		icon: <FaMapMarkedAlt />,
@@ -74,5 +82,32 @@ export const cards = [
 		desc: 'Learn about climate change and sustainability.',
 		btn: 'Start Learning →',
 		color: 'bg-green-100 text-green-700',
+	},
+];
+
+export const updates = [
+	{
+		icon: <FaLeaf />,
+		title: 'Air Quality Improved',
+		date: 'July 07, 2026',
+		description:
+			'AQI levels dropped by 18% across the city due to recent rainfall and plantation drives.',
+		color: 'bg-green-100 text-green-600',
+	},
+	{
+		icon: <FaWater />,
+		title: 'Heavy Rainfall Alert',
+		date: 'July 06, 2026',
+		description:
+			'Meteorological dept predicts moderate to heavy rainfall in coastal regions.',
+		color: 'bg-blue-100 text-blue-600',
+	},
+	{
+		icon: <FaTree />,
+		title: '10,000 Trees Planted',
+		date: 'July 05, 2026',
+		description:
+			'Volunteers successfully planted over 10,000 saplings during the Green Earth campaign.',
+		color: 'bg-emerald-100 text-emerald-600',
 	},
 ];
