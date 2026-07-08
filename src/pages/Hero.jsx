@@ -3,6 +3,7 @@ import eco from '../assets/eco.png';
 import ecobar from '../assets/ecobar.png';
 import { stats, cards, updates } from '../constants';
 
+
 function Hero() {
 	return (
 		<>
@@ -27,7 +28,7 @@ function Hero() {
 							future.
 						</p>
 
-						<div className='flex gap-4 flex-wrap mb-4 md:mb-10 '>
+						<div className='flex gap-4 flex-wrap mb-6 md:mb-15 '>
 							<button className=' w-60 rounded text-white font-bold bg-green-600 px-6 py-3 cursor-pointer '>
 								Explore Climate Map
 							</button>
@@ -37,10 +38,10 @@ function Hero() {
 						</div>
 
 						<div className='w-full relative -left-2 flex justify-center items-center'>
-							<div className='p-4 gap-2 bg-transparent backdrop-blur-lg rounded-2xl grid grid-col-1 lg:grid-cols-4 border border-gray-50  '>
+							<div className='p-3 bg-transparent backdrop-blur-lg rounded-2xl grid grid-col-1 lg:grid-cols-4 border border-gray-50  '>
 								{stats.map((stats, index) => (
 									<div
-										className='w-80 h-26 md:w-60 md:h-20 flex justify-center items-center gap-10 border-b lg:border-b-0 lg:border-r border-gray-50 last:border-b-0 last:lg:border-r-0'
+										className='w-80 h-26 md:w-60 md:h-22 flex justify-center items-center gap-6 border-b lg:border-b-0 lg:border-r border-gray-50 last:border-b-0 last:lg:border-r-0'
 										key={index}
 									>
 										<div
@@ -81,9 +82,9 @@ function Hero() {
 					{cards.map((cards, index) => (
 						<div
 							key={index}
-							className='w-75 h-50 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
+							className='w-75 border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
 						>
-							<div className=' flex flex-col gap-4'>
+							<div className=' flex flex-col gap-3'>
 								<div className='flex gap-5 items-center'>
 									<div
 										className={`w-14 h-14 rounded-full flex justify-center items-center text-3xl ${cards.color}`}
@@ -96,7 +97,7 @@ function Hero() {
 									</h3>
 								</div>
 
-								<p className='text-gray-600  tracking-tight'>
+								<p className='text-gray-600 text-sm tracking-tight'>
 									{cards.desc}
 								</p>
 
@@ -131,22 +132,20 @@ function Hero() {
 					<p className='text-green-600 font-semibold'>View All</p>
 				</div>
 
-				<p className='px-8 text-left text-gray-600 mt-4 '>
+				<p className='px-8 text-left text-gray-600 my-4 '>
 					Stay informed with the latest environmental news and alerts.
 				</p>
 
-				<div className='flex flex-wrap justify-center items-center gap-4'>
+				<div className='flex flex-wrap justify-center items-center px-5 gap-4'>
 					{updates.map((item, index) => (
 						<div
 							key={index}
-							className='flex flex-col gap-2 mt-8 w-100 overflow-hidden border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
+							className='flex flex-col gap-1 w-100 overflow-hidden border-2 border-gray-200 bg-white rounded-2xl p-5 shadow-lg shadow-gray-400'
 						>
-							<div className='h-48 bg-linear-to-br from-green-100 to-green-300 flex items-center justify-center'>
-								<div
-									className={`w-20 h-20 rounded-full flex items-center justify-center text-4xl ${item.color}`}
-								>
-									{item.icon}
-								</div>
+							<div className='h-48 flex items-center justify-center'>
+								
+								<img src={item.image} alt="" className='w-full h-48 object-cover'  />
+								
 							</div>
 
 							<div className='flex flex-col gap-2'>
@@ -158,7 +157,7 @@ function Hero() {
 									{item.title}
 								</h3>
 
-								<p className='text-gray-500 leading-5'>
+								<p className='text-gray-500 text-sm tracking-tight leading-5'>
 									{item.description}
 								</p>
 

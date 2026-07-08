@@ -1,4 +1,13 @@
-export const navLinks = [
+export const navLinksDesktop = [
+	{ name: 'Climate Map', path: '/climatemap' },
+	{ name: 'Reports', path: '/reports' },
+	{ name: 'Community', path: '/community' },
+	{ name: 'Learn', path: '/learn' },
+	{ name: 'About', path: '/about' },
+	{ name: 'Contact', path: '/contact' },
+];
+
+export const navLinksMobile = [
 	{ name: 'Climate Map', path: '/climatemap' },
 	{ name: 'Reports', path: '/reports' },
 	{ name: 'Community', path: '/community' },
@@ -85,29 +94,30 @@ export const cards = [
 	},
 ];
 
+import airQuality from '../assets/air_quality.jpeg';
+import heavyRainfall from '../assets/heavy_rainfall.jpeg';
+import treesPlanted from '../assets/trees_planted.jpeg';
+
 export const updates = [
 	{
-		icon: <FaLeaf />,
+		image: airQuality,
 		title: 'Air Quality Improved',
 		date: 'July 07, 2026',
 		description:
 			'AQI levels dropped by 18% across the city due to recent rainfall and plantation drives.',
-		color: 'bg-green-100 text-green-600',
 	},
 	{
-		icon: <FaWater />,
+		image: heavyRainfall,
 		title: 'Heavy Rainfall Alert',
 		date: 'July 06, 2026',
 		description:
 			'Meteorological dept predicts moderate to heavy rainfall in coastal regions.',
-		color: 'bg-blue-100 text-blue-600',
 	},
 	{
-		icon: <FaTree />,
+		image: treesPlanted,
 		title: '10,000 Trees Planted',
 		date: 'July 05, 2026',
 		description:
 			'Volunteers successfully planted over 10,000 saplings during the Green Earth campaign.',
-		color: 'bg-emerald-100 text-emerald-600',
 	},
 ];
